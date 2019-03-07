@@ -18,7 +18,7 @@ h1{
   font-size: 50px;
   font-weight: bold;
   letter-spacing: 0px;
-  font-family: 'Fugaz One';
+  font-family: 'Fugaz One', sans-serif;
 }
 
 .dollar {
@@ -57,21 +57,24 @@ button{
 }
 
 .go{
+  border: 1.5px solid #000000;
   font-size: 20px;
   font-weight: bolder;
   height:60px;
   width:60px;
   border-radius: 50%;
-  border:none;
+  border: 1.5px solid #000000;
   letter-spacing: 2px;
 }
 
 #addid:hover {
   border: 1.5px solid #000000;
+  padding-bottom: 3px;
 }
 
 #goid:hover {
-  border: 1.5px solid #000000;
+  background-color: black;
+  color: #ff9a9e;
 }
 
 .inputsection{
@@ -83,6 +86,19 @@ button{
   width: inherit;
   display: flex;
   flex-direction: column;
+}
+
+.resultSection{
+  margin: 15px 0px 30px 0px;
+  height: 100.5px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  overflow-wrap: break-word;
 }
 
 input{

@@ -12,12 +12,12 @@
     <h1>What to do with $10</h1>
     <div class="inputsection">
       <div class="inputs">
-        <input placeholder="suggestions here..." class="suggestions"></input>
+        <input placeholder="Add suggestion" class="suggestions"></input>
       </div>
       <button class="add" id="addid">+</button>
     </div>
     <div class="resultSection"></div>
-    <button class="go" id="goid">GO!</button>
+    <button class="go" id="goid">GO</button>
     <script src='https://code.jquery.com/jquery-3.3.1.min.js'> </script>
     <script>
       $(function() {
@@ -27,6 +27,21 @@
           $('.inputs').append('<input></input>')
           }
         $('.add').click(add_option)
+
+        var options = [] //variabel lista
+        
+        var go = function(){
+          $('input').each(function(){
+            $('.inputsection').hide()
+            $('.resultSection').css('display', 'flex')
+            options.push($(this).val())
+          })
+
+          var winner = options[Math.floor(Math.random() * options.length)]
+          console.log(winner)
+          $('.resultSection').text(winner)
+        }
+        $('.go').click(go)
       })
     </script>
       <footer>
